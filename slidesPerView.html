@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="./css/swiper.min.css">
+
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      max-height: 809px;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-button-next {
+      right: 16%;
+      width: 30px;
+      height: 30px;
+    }
+    .swiper-button-next:after {
+      content: ' ';
+      background-image: url(./image/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-button-prev {
+      left: 16%;
+      width: 30px;
+      height: 30px;
+    }
+    .swiper-button-prev:after {
+      content: ' ';
+      background-image: url(./image/arrow-left.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+      bottom: 0;
+    }
+    .swiper-pagination {
+      position: relative;
+    }
+    
+  </style>
+</head>
+<body>
+   <!-- Swiper -->
+<div class="">
+  <div class="swiper-content">
+    <!-- <div class="swiper-hidden"></div> -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./image/01.jpg" alt="" srcset="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/02.jpg" alt="" srcset="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./image/03.jpg" alt="" srcset="">
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
+      <div class="swiper-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
+    </div>
+   </div>
+</div>
+  
+
+  <!-- Swiper JS -->
+  <script src="./js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      autoplay: false,
+      loop: true,
+      initialSlide: 2,
+      spaceBetween: 20,
+      centeredSlides : true,
+      slidesPerView : 1.9,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+    });
+  </script>
+</body>
+</html>
